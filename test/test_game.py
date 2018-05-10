@@ -4,6 +4,7 @@ import os
 sys.path.insert(0, os.path.abspath(".."))
 import game
 
+
 class TestGameRoll(unittest.TestCase):
     def test_roll_all(self):
         g = game.Game(4)
