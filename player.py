@@ -1,6 +1,5 @@
 import game
 
-
 class Player(object):
     def __init__(self):
         self.board = [[0 for x in range(12)] for y in range(3)]
@@ -62,7 +61,7 @@ class Player(object):
             for x in range(12):
                 conflict = self.check_location_conflict(number, x, y)
                 if conflict == 0:
-                    result.append((y,x))
+                    result.append((x,y))
                 if conflict == 2:
                     break
         return result
@@ -81,7 +80,7 @@ class Player(object):
         for y in range(3):
             completed_number = 0
             for x in range(12):
-                if self.board[y][cur] > 0:
+                if self.board[y][x] > 0:
                     completed_number+=1
             if completed_number == 9:
                 completed_row +=1
