@@ -89,6 +89,14 @@ class Player(object):
         else:
             return False
 
+    def print_board(self):
+        print('board:')
+        for y in range(3):
+            for x in range(12):
+                print(repr(self.board[y][x]).rjust(3), end = '')
+            print('')
+
+
     def calculate_score(self):
         score = 0
         for y in range(3):
